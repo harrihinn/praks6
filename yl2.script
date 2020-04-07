@@ -1,0 +1,15 @@
+#!/bin/bash
+#küsib suvalise täisarvu, väljastab hinnangu paaris või paaritu
+from math import ceil;
+echo -n "Sisesta reisijate arv: "
+read a
+echo -n "Sisesta kohtade arv bussis: "
+read b
+d="echo ceil($a/$b)"
+c=`$ echo 'scale=2; $a/$b' | bc`
+if [ ($c % 2) -eq 1 ]
+then
+echo "$a on paaritu $b arv $a $d"
+else
+echo "Antud arv on paaris"
+fi
