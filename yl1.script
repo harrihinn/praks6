@@ -1,0 +1,12 @@
+#!/bin/bash
+#küsib suvalise täisarvu, väljastab hinnangu paaris või paaritu
+echo -n "Sisesta suvaline täisarv: "
+read a
+b=0
+b=$a % 2
+if [ $b -eq 1 ]
+then
+echo "$a on paaritu $b arv $a"
+else
+echo "Antud arv on paaris"
+fi
