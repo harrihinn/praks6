@@ -6,7 +6,7 @@ read a
 echo -n "Sisesta kohtade arv bussis: "
 read b
 d="echo ceil($a/$b)"
-c=`$ echo 'scale=2; $a/$b' | bc`
+c=`echo "scale=2; $a/$b" | bc`
 if [ ($c % 2) -eq 1 ]
 then
 echo "$a on paaritu $b arv $a $d"
