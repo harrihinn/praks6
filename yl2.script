@@ -6,11 +6,16 @@ echo -n "Sisesta reisijate arv: "
 read a
 echo -n "Sisesta kohtade arv bussis: "
 read b
-c=$(($a/$b))
-d=$(($a%$b))
-if [ $d > 0 ]
+busse=$(($a/$b))
+jaak=$(($a%$b))
+if [ $jaak > 0 ]
 then
-echo "a=$a b=$b c=$c d=$d"
-else
-echo "a=$a b=$b c=$c d=$d"
+busse=$(($busse+1))
 fi
+if [ $busse == 1 ]
+then
+i=''
+else
+i='i'
+fi
+echo "Kokku on vaja $busse buss$i"
