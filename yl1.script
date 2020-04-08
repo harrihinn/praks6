@@ -5,7 +5,7 @@ read a
 b=$(($a % 2))
 if [ $b -eq 1 ]
 then
-echo "$a on paaritu $b arv $a"
+echo "$a on paaritu arv"
 else
-echo "Antud arv on paaris"
+echo "$a on paarisarv"
 fi
