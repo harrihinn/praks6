@@ -8,7 +8,7 @@ echo -n "Sisesta kohtade arv bussis: "
 read b
 busse=$(($a/$b))
 jaak=$(($a%$b))
-if [ $jaak > 0 ]
+if [ $jaak -gt 0 ]
 then
 busse=$(($busse+1))
 fi
@@ -18,4 +18,4 @@ i=''
 else
 i='i'
 fi
-echo "Kokku on vaja $busse buss$i"
+echo "Kokku on vaja $busse buss$i jääk=$jaak"
